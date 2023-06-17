@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  #get 'home/index' to make the home page the same as localhost 3000,did this:
+  get 'home/zipcode'
   root 'home#index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  post "zipcode" => 'home#zipcode'
+
 end
