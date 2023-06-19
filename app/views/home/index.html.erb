@@ -1,5 +1,12 @@
 <div class="container <%= @api_color%> text-white flex rounded p-5">
 
+<% if flash[:error] %>
+  <div class="alert alert-danger">
+    <%= flash[:error] %>
+  </div>
+<% end %>
+
+
     <h1 class="display-4">My Air Quality App</h1>
     <h3>AQI: <%= @final_output %></h3>
     <p class="lead p-1">This is the current Ozone air quality readout for my neighborhood</p>
